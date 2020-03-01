@@ -17,5 +17,6 @@ RUN apk update && \
     go get github.com/jinzhu/gorm
 
 EXPOSE 8080
+CMD ["go","run","migrate/migrate.go"]
 CMD ["go","run","main.go"]
 

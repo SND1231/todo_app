@@ -7,11 +7,12 @@ import (
 )
 
 const DRIVER = "mysql"
-const DSN = "root:root@tcp(mysql-container:3306)/gin_app?charset=utf8&parseTime=True&loc=Local"
+const DSN = "root:a1b2V4d@tcp(mysql-container:3306)/gin_app?charset=utf8&parseTime=True&loc=Local"
 
 func main() {
 	db, err := gorm.Open(DRIVER, DSN)
 	if err != nil {
+                fmt.Println(err)
 		fmt.Println("Open fail")
 	} else {
 		fmt.Println("OpenOK")

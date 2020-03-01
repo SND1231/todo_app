@@ -6,7 +6,7 @@ import (
 )
 
 func Connection() *gorm.DB {
-    db, err := gorm.Open("mysql", "root:root@tcp(mysql-container:3306)/gin_app?charset=utf8&parseTime=True&loc=Local")
+    db, err := gorm.Open("mysql", "root:a1b2V4d@tcp(mysql-container:3306)/gin_app?charset=utf8&parseTime=True&loc=Local")
     if err != nil {
         panic("failed to connect database")
     }

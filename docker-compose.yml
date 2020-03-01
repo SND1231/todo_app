@@ -11,6 +11,7 @@ services:
       - ./mysql/conf.d:/etc/mysql/conf.d
     environment:
       MYSQL_ROOT_PASSWORD: a1b2V4d
+      MYSQL_DATABASE: gin_app
   web:
     build:
       context: . 
