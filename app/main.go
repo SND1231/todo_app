@@ -28,7 +28,7 @@ func main() {
             "Authorization",
         },
         AllowOrigins: []string{
-            "http://192.168.33.10",
+            "*",
         },
     }))
     r.GET("/todo", controller.List)

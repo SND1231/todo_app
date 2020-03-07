@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>vue-test</title>
+  </head>
+  <body>
+    <div id="todo_list">
+      <h2>新しい作業の追加</h2>
+      <form class="add-form" v-on:submit.prevent="createTodo">
+        <!-- コメント入力フォーム -->
+        コメント <input type="text" ref="comment">
+        <!-- 追加ボタンのモック -->
+        <button type="submit">追加</button>
+      </form>
+      <h2>TODO一覧</h2>
+      <table align="center">
+        <thead v-pre>
+          <tr>
+            <th class="id">ID</th>
+            <th class="comment">コメント</th>
+            <th class="edit_button">-</th>
+            <th class="delete_button">-</th>
+          </tr>
+        </thead>
+        <tobody>
+          <tr V-for="todo in todos">
+            <th><div ref="id">{{ todo.ID }}</div></th>
+            <th><input type="text" ref="content" v-bind:value="todo.Content"></th>
+            <th><button v-on:click="editTodo(todo.ID)">編集</button></th>
+            <th><button v-on:click="deleteTodo(todo.ID)">削除</button></th>
+          </tr>
+        </tobody>
+      </table>
+    </div>
+  </body>
+</html>

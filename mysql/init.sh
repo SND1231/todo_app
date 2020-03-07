@@ -1,2 +1,2 @@
 #!/bin/sh
-mysqladmin password a1b2V4d -u root -p
+mysql -u root -p gin_app < mysql.dump

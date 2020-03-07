@@ -12,10 +12,11 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: a1b2V4d
       MYSQL_DATABASE: gin_app
-  web:
+  backend:
     build:
       context: . 
       dockerfile: ./docker/go/Dockerfile
+    container_name: golang-container
     ports:
       - 8080:8080
     volumes:
@@ -24,4 +25,14 @@ services:
     tty: true
     depends_on:
       - db
-
+  frontend:
+    build:
+      context: .
+      dockerfile: ./docker/vue/Dockerfile
+    container_name: vue-container
+    volumes:
+      - ./front:/app
+    working_dir: /app
+    ports:
+      - 9000:80
+    tty: true

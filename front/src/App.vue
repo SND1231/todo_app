@@ -1,0 +1,15 @@
+<template>
+  
+</template>
+
+<style>
+/* ファイルパスに従って@importntの後にファイルパスを書き込む */
+#todo_list {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
